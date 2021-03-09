@@ -4,7 +4,8 @@ from tkinter import messagebox as msg
 import requests
 
 try:
-    response = requests.get("http://data.fixer.io/api/latest?access_key=50fb3dfe4a69f84ef47b06100b644c1&format=1")
+    api_key="Enter your key here"
+    response = requests.get(f"http://data.fixer.io/api/latest?access_key={api_key}&format=1")
 except requests.exceptions.ConnectionError:
     msg.showerror("Connection error", "Please check your internet Connection")
 else:
